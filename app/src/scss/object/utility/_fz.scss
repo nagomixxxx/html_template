@@ -1,0 +1,39 @@
+/* Utility - font-size */
+// font-size
+$fz-xsm: 0.6rem;
+$fz-sm: 0.8rem;
+$fz-md: 1rem;
+$fz-lg: 1.2rem;
+$fz-xlg: 1.4rem;
+$fz-xxlg: 2rem;
+
+.u-fz_xsm {
+	font-size: $fz-xsm;
+}
+
+.u-fz_sm {
+	font-size: $fz-sm;
+}
+
+.u-fz_md {
+	font-size: $fz-md;
+}
+
+.u-fz_lg {
+	font-size: $fz-lg;
+}
+
+.u-fz_xlg {
+	font-size: $fz-xlg;
+}
+
+.u-fz_xxlg {
+	font-size: $fz-xxlg;
+}
+
+@for $i from 10 through 32 {
+
+	.u-fz#{$i} {
+		font-size: #{$i}px;
+	}
+}

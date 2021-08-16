@@ -1,0 +1,9 @@
+$b: block;
+$ib: inline-block;
+
+@mixin content($display: $b, $contentW: 100%, $contentH: 100%){
+  content:"";
+  display: $display;
+  width: $contentW;
+  height: $contentH;
+}

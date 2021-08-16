@@ -1,0 +1,33 @@
+/* Utility - margin-top */
+@for $i from 1 through 10 {
+
+	.u-mt#{$i}:not(:root) {
+		margin-top: #{$i}rem;
+	}
+}
+
+
+/* Utility - margin-bottom */
+@for $i from 1 through 10 {
+
+	.u-mb#{$i}:not(:root) {
+		margin-bottom: #{$i}rem;
+	}
+}
+
+
+/* Utility - margin-right */
+@for $i from 1 through 10 {
+
+	.u-mr#{$i}:not(:root) {
+		margin-right: #{$i}rem;
+	}
+}
+
+/* Utility - margin-left */
+@for $i from 1 through 10 {
+
+	.u-ml#{$i}:not(:root) {
+		margin-left: #{$i}rem;
+	}
+}

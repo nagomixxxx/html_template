@@ -1,0 +1,12 @@
+$center: center;
+$top: flex-start;
+$left: flex-start;
+$right: flex-end;
+$bottom: flex-end;
+
+@mixin centering($layoutX:$center, $layoutY:$center) {
+	display: flex;
+	flex-direction: column;
+	justify-content: $layoutY;
+	align-items: $layoutX;
+}

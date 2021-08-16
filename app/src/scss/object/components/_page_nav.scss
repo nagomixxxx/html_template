@@ -1,0 +1,35 @@
+.c-page_nav{
+  width: 100%;
+  border-bottom: solid 1px #707070;
+  border-top: solid 1px #707070;
+
+  @include mq("pc"){
+    padding: 20px 0;
+    margin-bottom: 48px;
+  }
+
+  @include mq("tab"){
+    padding: 10px 0;
+    margin-bottom: 25px;
+  }
+
+  &._right{
+    text-align: right;
+  }
+
+  a{
+    text-decoration: none;
+
+    @include mq("pc"){
+      font-size: 14px;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    @include mq("tab"){
+      font-size: 12px;
+    }
+  }
+}

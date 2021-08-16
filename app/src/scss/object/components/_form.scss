@@ -1,0 +1,240 @@
+// フォーム基本レイアウト
+.c-form{
+  width: 100%;
+  border-top: solid 1px #e2e2e8;
+}
+
+.c-form_group{
+  display: flex;
+  align-items: center;
+  padding: 24px 16px;
+  border-bottom: solid 1px #e2e2e8;
+
+  @include mq("sp"){
+    display: block;
+    padding: 10px 0;
+  }
+
+  .group_head{
+    flex-basis: 30%;
+
+    @include mq("sp"){
+      margin-bottom: 1em;
+    }
+  }
+  .group_body{
+    flex-basis: 70%;
+  }
+}
+
+
+//フォームの基本サイズ
+$form_sm: 20%;
+$form_md: 70%;
+$form_lg: 100%;
+
+//フォーム基本カラー
+$form_border_style: 1px solid rgba(#000, 0.3);
+$form_forcus_border_style: 1px solid #04c;
+$form_bg_color: #fff;
+
+// フォーム基本デザイン
+%form_basic_style{
+  border: $form_border_style;
+  background-color: $form_bg_color;
+  border-radius: 4px;
+  padding: 0.8em;
+  font-size: 16px;
+
+  &._sm{
+    @include mq("pc") {
+      width: $form_sm;
+    }
+
+    @include mq("tab") {
+      width: 100%;
+    }
+  }
+
+  &._md{
+    @include mq("pc") {
+      width: $form_md;
+    }
+
+    @include mq("tab") {
+      width: 100%;
+    }
+  }
+
+  &._lg{
+
+    @include mq("pc") {
+      width: $form_lg;
+    }
+
+    @include mq("tab") {
+      width: 100%;
+    }
+  }
+
+  &::placeholder{
+    color: #ccc;
+  }
+}
+
+
+// input - texxt
+.c-form_input{
+  @extend %form_basic_style;
+}
+
+// selectmenu
+.c-form_select{
+  @extend %form_basic_style;
+
+  padding: 0.8em 1em 0.8em 0.8em;
+  appearance: none;
+  background: #fff url(../images/compornents/icon_arrow_red_bottom.svg) right 0.8em center no-repeat;
+}
+
+// textarea
+.c-form_textarea{
+  @extend %form_basic_style;
+}
+
+// radio button
+.c-form_radio{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.25;
+
+  &:not(:last-of-type){
+    margin-bottom: 4px;
+  }
+
+  input[type="radio"]{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0;
+    appearance: none;
+    z-index: 2;
+
+    & + .c-form_radio_icon{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1.25em;
+      height: 1.25em;
+      border: $form_border_style;
+      background-color: #fff;
+      border-radius: 50%;
+      z-index: 4;
+    }
+
+    &:checked + .c-form_radio_icon{
+      background: #fff;
+      border: $form_forcus_border_style;
+
+      &::after{
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 65%;
+        height: 65%;
+        background-color: #04c;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+  .c-form_radio_label{
+    position: relative;
+    padding-left: 1.75em;
+    z-index: 3;
+  }
+}
+
+// checkbox
+.c-form_checkbox{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.25;
+
+  input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    top: -0.08em;
+    left: -0.08em;
+    width: 1.4em;
+    height: 1.4em;
+    margin: 0;
+    font-size: 1em;
+    z-index: 2;
+
+    &:checked + .c-form_checkbox_icon{
+      background: #04c;
+      border: $form_forcus_border_style;
+
+        &::after{
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 30%;
+        height: 60%;
+        border-bottom: 0.2em solid #fff;
+        border-right: 0.2em solid #fff;
+        transform: translate(-50%, 0) rotate(45deg);
+      }
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .c-form_checkbox_icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.25em;
+    height: 1.25em;
+    border: $form_border_style;
+    background-color: $form_bg_color;
+    border-radius: .15em;
+    z-index: 4;
+  }
+
+  .c-form_checkbox_label{
+    position: relative;
+    padding-left: 1.75em;
+    z-index: 3;
+  }
+}
+
+// 必須項目
+.c-form_requied{
+  color: #fff;
+  background-color: $cr-red01;
+  font-size: 12px;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 10px;
+  margin-left: 0.5em;
+  margin-bottom: 0.2em;
+  font-weight: bold;
+}

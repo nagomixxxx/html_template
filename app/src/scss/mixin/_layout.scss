@@ -1,0 +1,7 @@
+@mixin layout ( $max-width: $layout-max-width, $min-width:$layout-min-width ) {
+    width: $layout-width-inner;
+    max-width: $max-width;
+    min-width: $min-width;
+    margin-right: auto;
+    margin-left: auto;
+}

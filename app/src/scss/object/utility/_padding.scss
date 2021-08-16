@@ -1,0 +1,33 @@
+/* Utility - padding-top */
+@for $i from 1 through 10 {
+
+	.u-pt#{$i}:not(:root) {
+		padding-top: #{$i}em;
+	}
+}
+
+
+/* Utility - padding-bottom */
+@for $i from 1 through 10 {
+
+	.u-pb#{$i}:not(:root) {
+		padding-bottom: #{$i}em;
+	}
+}
+
+
+/* Utility - padding-right */
+@for $i from 1 through 10 {
+
+	.u-pr#{$i}:not(:root) {
+		padding-right: #{$i}em;
+	}
+}
+
+/* Utility - padding-left */
+@for $i from 1 through 10 {
+
+	.u-pl#{$i}:not(:root) {
+		padding-left: #{$i}em;
+	}
+}

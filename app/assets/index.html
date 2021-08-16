@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="サイトの説明文" />
+
+  <meta property="og:url" content="URL" />
+  <meta property="og:title" content="サイト名" />
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="サイトの説明文" />
+  <meta property="og:image" content="URL/images/ogp.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="Twitterアカウント" />
+  <meta property="og:site_name" content="サイト名" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="fb:app_id" content="fab_app_ID" />
+
+  <link rel="shortcut icon" href="URL/images/fav.png">
+  <!--[if IE]>
+  		<link rel="shortcut icon" href="URL/images/fav-ie.ico">
+  <![endif]-->
+  <link rel="apple-touch-icon" href="URL/images/site-ico.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <title>サイトタイトル</title>
+</head>
+
+<body>
+
+  <div class="l-wrapper">
+
+    <header class="l-header">
+      <div class="l-header_inner">
+        <nav class="l-header_nav">
+          <button class="l-header_nav_btn js-menu_toggle" type="button">
+            <span class="btn_line1"></span>
+            <span class="btn_line2"></span>
+            <span class="btn_line3"></span>
+            <span class="btn_text">MENU</span>
+          </button>
+          <div class="l-header_nav_inner js-menu_item">
+            <ul class="l-header_nav_list">
+              <li class="l-header_nav_item"><a href="">NAV</a></li>
+              <li class="l-header_nav_item"><a href="">NAV</a></li>
+              <li class="l-header_nav_item"><a href="">NAV</a></li>
+              <li class="l-header_nav_item"><a href="">NAV</a></li>
+              <li class="l-header_nav_item"><a href="">NAV</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="l-header_nav_overlay js-menu_overlay"></div>
+
+    <main class="main">
+
+      <div class="c-button _md"><a href="">ボタン</a></div>
+      <div class="c-button _md"><input type="submit" value="送信用のボタン"></div>
+      <div class="c-button _md"><input type="button" value="汎用性のあるボタン"></div>
+      <div class="c-button _md"><button>そうしん</button></div>
+
+      <div>
+        <dl class="c-form">
+          <div class="c-form_group">
+            <dt class="group_head">テキストボックス</dt>
+            <dd class="group_body"><input type="text" placeholder="プレースホルダー" class="c-form_input _sm"></dd>
+          </div>
+          <div class="c-form_group">
+            <dt class="group_head">テキストエリア</dt>
+            <dd class="group_body"><textarea name="" id="" rows="10" class="c-form_textarea _md"></textarea></dd>
+          </div>
+          <div class="c-form_group">
+            <dt class="group_head">セレクトメニュー</dt>
+            <dd class="group_body">
+              <select name="" id="" class="c-form_select _md">
+                <option value="">ああああ</option>
+                <option value="">ああああ</option>
+                <option value="">ああああ</option>
+                <option value="">ああああ</option>
+              </select>
+            </dd>
+          </div>
+          <div class="c-form_group">
+            <dt class="group_head">ラジオボタン</dt>
+            <dd class="group_body">
+              <label for="content01" class="c-form_radio">
+                <input type="radio" name="content" id="content01" value="ご注文について" />
+                <span class="c-form_radio_icon"></span>
+                <span class="c-form_radio_label">選択肢１</span>
+              </label>
+              <label for="content02" class="c-form_radio">
+                <input type="radio" name="content" id="content02" value="ご注文について" />
+                <span class="c-form_radio_icon"></span>
+                <span class="c-form_radio_label">選択肢１</span>
+              </label>
+              <label for="content03" class="c-form_radio">
+                <input type="radio" name="content" id="content03" value="ご注文について" />
+                <span class="c-form_radio_icon"></span>
+                <span class="c-form_radio_label">選択肢１</span>
+              </label>
+            </dd>
+          </div>
+          <div class="c-form_group">
+            <dt class="group_head">チェックボックス</dt>
+            <dd class="group_body">
+              <label for="privacy" class="c-form_checkbox">
+                <input type="checkbox" name="privacy" id="privacy" value="同意する">
+                <span class="c-form_checkbox_icon"></span>
+                <span class="c-form_checkbox_label"><a href="" target="_blank">プライバシーポリシー</a>に同意する</span>
+              </label>
+            </dd>
+          </div>
+        </dl>
+
+      </div>
+
+
+
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-footer_inner">
+
+      </div>
+      <p class="l-footer_copy">&copy;SITENAME</p>
+    </footer>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

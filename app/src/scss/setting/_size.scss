@@ -1,0 +1,34 @@
+// レイアウト幅
+$layout-width-inner: 86vw;
+$layout-max-width: 1400px;
+$layout-min-width: 960px;
+
+// 左右余白
+$layout-padding: 7vw;
+
+
+// ブレークポイント
+$breakpoints: (
+	"sp": "screen and (max-width: 576px)",
+	"tab": "screen and (max-width: 768px)",
+	"pc": "screen and (min-width: 769px)"
+) !default;
+
+
+// z-index の指定
+$layer: (
+	modal: 100,
+	drawer: 40,
+	floating: 30,
+	header: 20,
+	footer: 10,
+	default: 1,
+	bg:2,
+	cont:3
+);
+
+// headerの高さ
+$headerH: (
+	sp:70px,
+	pc:70px
+);

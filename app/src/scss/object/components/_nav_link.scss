@@ -1,0 +1,37 @@
+.c-nav_link{
+  width: 100%;
+
+  @include mq("pc"){
+    padding: 20px 0;
+    margin-bottom: 48px;
+  }
+
+  @include mq("tab"){
+    padding: 10px 0;
+    margin-bottom: 25px;
+  }
+
+  .screen-reader-text{
+    visibility: hidden;
+  }
+
+  .nav-links{
+    text-align: center;
+
+    .page-numbers{
+      display: inline-block;
+      line-height: 1;
+      padding: 0.5em;
+      transition: all 0.3s;
+      text-decoration: none;
+
+      &.current{
+        background-color: $cr-red02;
+      }
+
+      &:not(.current):hover{
+        background-color: rgba(#fff, 0.5);
+      }
+    }
+  }
+}

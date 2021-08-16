@@ -1,0 +1,45 @@
+.c-icon{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0.2em;
+
+  @include mq("pc"){
+    width: 0.8em;
+    height: 0.8em;
+  }
+
+  @include mq("tab"){
+    width: 0.8em;
+    height: 0.8em;
+  }
+
+
+  &._blank{
+    background: url(../images/compornents/icon_blank_white.svg) center top no-repeat;
+    background-size: contain;
+  }
+
+  &._arrow{
+
+    //white
+    &._right{
+      background: url(../images/compornents/icon_arrow_white.svg) center top no-repeat;
+      background-size: contain;
+      margin-left: 0.2em;
+    }
+
+    &._left{
+      background: url(../images/compornents/icon_arrow_white.svg) center top no-repeat;
+      background-size: contain;
+      transform: rotate(-180deg);
+      margin-right: 0.2em;
+    }
+
+    //red
+    &._red._right{
+      background: url(../images/compornents/icon_arrow_red.svg) center top no-repeat;
+      background-size: contain;
+    }
+  }
+}

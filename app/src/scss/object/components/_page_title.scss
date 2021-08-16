@@ -1,0 +1,41 @@
+.c-page_title{
+  width: 100%;
+  @include centering($left, $center);
+
+  @include mq("pc"){
+    height: 480px;
+  }
+
+  @include mq("tab"){
+    height: 40vw;
+    min-height: 200px;
+  }
+}
+
+.c-page_title_text{
+  background-color: $cr-gray01;
+  font-weight: bold;
+  color: #ffffff;
+
+  @include mq("pc"){
+    font-size: 50px;
+    line-height: 1;
+    letter-spacing: 4.5px;
+    padding: 20px 90px 23px 7vw;
+  }
+
+  @include mq("tab"){
+    font-size: 40px;
+    letter-spacing: 1.71px;
+    line-height: 1.42;
+    padding: 10px 35px 10px 30px;
+  }
+
+  @include mq("sp"){
+    font-size: 28px;
+  }
+
+  &::first-letter{
+    color: $cr-red01;
+  }
+}

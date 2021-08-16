@@ -1,0 +1,33 @@
+// --------- Colors ---------
+
+// 01.Red
+$cr-red01: #f90;
+$cr-red02: #B73333;
+
+// 02.Gold
+$cr-gold: #90803D;
+
+// 03.Gray
+$cr-gray01: #181818;
+
+
+
+// --------- Color Scheme ---------
+
+// 01.テキスト色
+$cr-txt: $cr-gray01;
+
+// 02.背景
+$cr-bg: #fff1;
+
+// 03.リンク色
+$cr-link: inherit;
+
+// 04.線色
+$cr-bd: rgba(#000, 0.3);
+
+// 05.透過度
+$opacity: 0.6;
+
+// 06.テーブル
+$cr-table: rgba(#000, 0.3);

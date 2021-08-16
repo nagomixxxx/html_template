@@ -1,0 +1,22 @@
+.l-wrapper {
+	display: flex;
+	flex-direction: column;
+	word-break: break-all;
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+
+	@include mq("pc"){
+		font-size: $fz-base;
+		line-height: $lh-base;
+		letter-spacing: $ls-base;
+	}
+
+	@include mq("tab"){
+	  font-size: 14px;
+	  line-height: 2;
+	  letter-spacing: 0.7px;
+	}
+
+}
