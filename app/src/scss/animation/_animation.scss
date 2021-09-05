@@ -1,0 +1,106 @@
+/* ロード時にフェード */
+.an_load {
+    opacity: 0;
+    animation: si_fade 0.5s ease-in forwards 1s;
+  }
+
+@keyframes si_fade {
+    0% {opacity: 0;}
+    15% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.an_load_bottom {
+    opacity: 0;
+    animation: si_bottom 0.5s ease-in-out forwards 1.5s;
+}
+
+@keyframes si_bottom {
+    0% {opacity: 0; transform: translate(0, 20px)}
+    100% {opacity: 1; transform: translate(0, 0)}
+}
+
+
+  /*--------------------------------------------------------
+      スクロールで表示
+  --------------------------------------------------------*/
+  /* アニメーションを有効にする */
+  .an_true,
+  .an_delay_item {
+    transition: opacity 0.8s, transform 0.5s;
+  }
+
+  /* フェードで現れるｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ*/
+  .si_fade,
+  .si_top,
+  .si_bottom,
+  .si_left,
+  .si_right{
+    opacity: 0;
+  }
+  .si_fade.scrollin,.scrollin .si_fade {opacity: 1;}
+  .si_top {transform: translate(0, -50px);}
+  .si_bottom {transform: translate(0, 50px);}
+  .si_left {transform: translate(-50px, 0);}
+  .si_right {transform: translate(50px, 0);}
+  .si_top.scrollin,.scrollin .si_top,
+  .si_bottom.scrollin,.scrollin .si_bottom,
+  .si_left.scrollin,.scrollin .si_left,
+  .si_right.scrollin,.scrollin .si_right{
+    opacity: 1;
+    transform : translate(0, 0);
+  }
+  
+  /* 回転して現れる ｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ*/
+  .si_roll {
+    transform: scale(0) rotateZ(0deg);
+  }
+  .si_roll.scrollin,.scrollin .si_roll {
+    transform: scale(1) rotateZ(360deg);
+  }
+  /* 拡大して現れる ｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ*/
+  .si_grow {
+    opacity: 0;
+    transform: scale(0);
+  }
+  .si_grow.scrollin,.scrollin .si_grow {
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* 拡大して現れる ｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ*/
+  .si_shrink {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  .si_shrink.scrollin,.scrollin .si_shrink {
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* si_pop ｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ*/
+  .si_bounce{
+      opacity: 0;
+      transform: scale(0);
+  }
+  .si_bounce.scrollin,.scrollin .si_bounce{
+      animation: si_bounce 1s ease forwards;
+  }
+  @keyframes si_bounce {
+      0% {
+          opacity: 0;
+          transform: scale(0.9);
+      }
+      20% {
+          transform: scale(1.1);
+      }
+      40% {
+          transform: scale(1);
+      }
+      60% {
+          opacity: 1;
+          transform: scale(1.02);
+      }
+      100% {
+          opacity: 1;
+          transform: scale(1);
+      }
+  }
+  

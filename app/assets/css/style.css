@@ -1264,3 +1264,221 @@ button {
 .u-pl10:not(:root) {
   padding-left: 10em;
 }
+
+/* ロード時にフェード */
+.an_load {
+  -webkit-animation: si_fade 0.5s ease-in forwards 1s;
+  animation: si_fade 0.5s ease-in forwards 1s;
+  opacity: 0;
+}
+
+@-webkit-keyframes si_fade {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes si_fade {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.an_load_bottom {
+  -webkit-animation: si_bottom 0.5s ease-in-out forwards 1.5s;
+  animation: si_bottom 0.5s ease-in-out forwards 1.5s;
+  opacity: 0;
+}
+
+@-webkit-keyframes si_bottom {
+  0% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes si_bottom {
+  0% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/*--------------------------------------------------------
+      スクロールで表示
+  --------------------------------------------------------*/
+/* アニメーションを有効にする */
+.an_true,
+.an_delay_item {
+  -webkit-transition: opacity 0.8s, -webkit-transform 0.5s;
+  transition: opacity 0.8s, -webkit-transform 0.5s;
+  transition: opacity 0.8s, transform 0.5s;
+  transition: opacity 0.8s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+/* フェードで現れるｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ*/
+.si_fade,
+.si_top,
+.si_bottom,
+.si_left,
+.si_right {
+  opacity: 0;
+}
+
+.si_fade.scrollin, .scrollin .si_fade {
+  opacity: 1;
+}
+
+.si_top {
+  -webkit-transform: translate(0, -50px);
+  transform: translate(0, -50px);
+}
+
+.si_bottom {
+  -webkit-transform: translate(0, 50px);
+  transform: translate(0, 50px);
+}
+
+.si_left {
+  -webkit-transform: translate(-50px, 0);
+  transform: translate(-50px, 0);
+}
+
+.si_right {
+  -webkit-transform: translate(50px, 0);
+  transform: translate(50px, 0);
+}
+
+.si_top.scrollin, .scrollin .si_top,
+.si_bottom.scrollin, .scrollin .si_bottom,
+.si_left.scrollin, .scrollin .si_left,
+.si_right.scrollin, .scrollin .si_right {
+  -webkit-transform: translate(0, 0);
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* 回転して現れる ｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ*/
+.si_roll {
+  -webkit-transform: scale(0) rotateZ(0deg);
+  transform: scale(0) rotateZ(0deg);
+}
+
+.si_roll.scrollin, .scrollin .si_roll {
+  -webkit-transform: scale(1) rotateZ(360deg);
+  transform: scale(1) rotateZ(360deg);
+}
+
+/* 拡大して現れる ｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ*/
+.si_grow {
+  -webkit-transform: scale(0);
+  opacity: 0;
+  transform: scale(0);
+}
+
+.si_grow.scrollin, .scrollin .si_grow {
+  -webkit-transform: scale(1);
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 拡大して現れる ｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ*/
+.si_shrink {
+  -webkit-transform: scale(1.5);
+  opacity: 0;
+  transform: scale(1.5);
+}
+
+.si_shrink.scrollin, .scrollin .si_shrink {
+  -webkit-transform: scale(1);
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* si_pop ｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰｰ*/
+.si_bounce {
+  -webkit-transform: scale(0);
+  opacity: 0;
+  transform: scale(0);
+}
+
+.si_bounce.scrollin, .scrollin .si_bounce {
+  -webkit-animation: si_bounce 1s ease forwards;
+  animation: si_bounce 1s ease forwards;
+}
+
+@-webkit-keyframes si_bounce {
+  0% {
+    -webkit-transform: scale(0.9);
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  20% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(1.02);
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes si_bounce {
+  0% {
+    -webkit-transform: scale(0.9);
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  20% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(1.02);
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
+  }
+}
