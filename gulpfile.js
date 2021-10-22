@@ -45,7 +45,7 @@ const browserSync = require( 'browser-sync' ).create();
 gulp.task( 'serve', done => {
   browserSync.init({
     server: {
-      baseDir: './app/assets',
+      baseDir: './app',
       index: 'index.html'
     }
   });
@@ -58,7 +58,7 @@ gulp.task( 'watch', () => {
     done();
   };
 
-  gulp.watch( './app/assets/**/*', browserReload );
+  gulp.watch( './app/**/*', browserReload );
   gulp.watch( './app/src/scss/**/*.scss', gulp.series( 'sass' ) );
   gulp.watch( './app/src/js/*.js', gulp.series( 'babel' ) );
 });
