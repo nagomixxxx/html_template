@@ -1,7 +1,16 @@
 @mixin layout ( $max-width: $layout-max-width, $min-width:$layout-min-width ) {
-    width: $layout-width-inner;
-    max-width: $max-width;
-    min-width: $min-width;
-    margin-right: auto;
-    margin-left: auto;
+
+    @include mq('pc'){
+        width: $layout-width-inner;
+        max-width: $max-width;
+        min-width: $min-width;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @include mq('tab'){
+        width: $layout-width-inner;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
