@@ -1,0 +1,34 @@
+.l-container_lg{
+    @include layout(1380px, $layout-min-width);
+}
+
+.l-container_md{
+    @include layout($layout-max-width, $layout-min-width);
+
+    // 2カラムレイアウト
+    &._col_2{
+        display: flex;
+
+        .l-container_side{
+            flex-basis: 288px;
+            margin-right: 63px;
+        }
+
+        .l-container_main{
+            flex-basis: calc(100% - 288px - 63px);
+        }
+    }
+}
+
+.l-container_sm{
+    @include layout(1030px, $layout-min-width);
+}
+
+// 背景色があるコンテンツ用
+.l-container_wrap{ 
+    width: 100%;
+    
+    @include mq('pc'){
+        min-width: $layout-min-width;
+    }
+}
